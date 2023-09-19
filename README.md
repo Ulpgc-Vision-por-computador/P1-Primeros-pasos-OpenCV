@@ -12,10 +12,12 @@
 
 - El código muestra la imagen de 2 formas distintas: a través de una ventana con la imagen del tablero esperando que el usuario presione una tecla en la ventana para cerrarla, y mostrando una figura Matplotlib del tablero.
 
+![Tablero de ajedrez 8x8 blanco y negro](tablero.png)
+
 ### Imagen estilo Mondrian
 
 
-El programa crea una matriz NumPy que representa una imagen de 200x200 píxeles con tres canales de color (rojo, verde y azul). Inicialmente, todos los píxeles están configurados en negro.
+**El programa crea una matriz NumPy que representa una imagen de 200x200 píxeles con tres canales de color (rojo, verde y azul). Inicialmente, todos los píxeles están configurados en negro.**
 
 Luego se configuran partes dela imagen para que tomen un color distiinto, tomando un ejemplo:
 ```py
@@ -28,14 +30,29 @@ mondrian_image[0:40,0:100,1] = 100
 
 - `plt.show()`: Muestra la figura Matplotlib con la imagen de color enriquecida con formas y colores.
 
+![Mondrian por Willy Escovilla](mondrianwilly.png)
+
+![Mondrian por Eduardo Etopa(un poco feo)](imagen.jpg)
+
 
 
 ### Funciones de dibujo de OpenCV
-El código presenta una alternativa utilizando la librería OpenCV. Crea formas geométricas(rectángulos y líneas) para realizar una imagen muy similar a la obtenida anteriormente.
+**El código presenta una alternativa utilizando la librería OpenCV. Crea formas geométricas(rectángulos y líneas) para realizar una imagen muy similar a la obtenida anteriormente.**
 
 - `cv2.rectangle(color_image, (0,0), (200,200), (255,255,255), 200)`: Utiliza OpenCV para generar un rectángulo blanco entre las coordenadas especificadas, siendo el último parámetro de la función el grosor de la figura, o en el caso de ser -1, crear una figura rellenada
 
 - `cv2.line(color_image, (100, 0), (100, 160), (0,0,0), 3)`: Genera una línea negra desde las coordendas especificadas en el primer parámetro hasta las coordenadas del segundo.
+
+
+
+###Modificación de valores de un plano de imagen
+
+El código primero separa los 3 planos de color de la imagen en variables `r`(red), `g`(green), y `b`(blue)
+
+- `r_modificado = r + 80`: Se modifica el valor de uno de los planos de color en la imagen proporcionada.
+- `emoji_modified = cv2.merge((b, g, r_modificado))`: Crea una nueva imagen combinando los canales modificados
+
+
   
 
 ### Destacado del pixel más claro y del más oscuro
@@ -50,5 +67,7 @@ En esta tarea se realiza una captura de vídeo a través de la Webcam, a través
 - Mostramos en una ventana emrgente caada frame de la cámara mostrando el vídeo con los círculos
 
 ### Propuesta de popart
+
+Para la propuesta de pop art se usaron varias técnicas dstintas 
 
 
