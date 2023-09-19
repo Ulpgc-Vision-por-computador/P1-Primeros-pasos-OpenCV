@@ -52,6 +52,10 @@ El código primero separa los 3 planos de color de la imagen en variables `r`(re
 - `r_modificado = r + 80`: Se modifica el valor de uno de los planos de color en la imagen proporcionada.
 - `emoji_modified = cv2.merge((b, g, r_modificado))`: Crea una nueva imagen combinando los canales modificados
 
+  ![Imagen sin modificaciones](emoji.jpg)
+
+  ![Imagen modificada](risatrol.png)
+
 
   
 
@@ -68,6 +72,30 @@ En esta tarea se realiza una captura de vídeo a través de la Webcam, a través
 
 ### Propuesta de popart
 
-Para la propuesta de pop art se usaron varias técnicas dstintas 
+
+
+- Se convierte el cuadro a escala de grises (`gray_frame`) y se descompone en sus canales RGB (`r`, `g` y `b`).
+
+- En la región superior izquierda (`tl`) se crea una imagen con 2 de los canales de color en escala de gris y uno en negativo y se combina con el canal verde, resultando en una imagen de tonos amarillos y azules.
+
+- En la región superior derecha (`tr`), se detecta el color rojo en el cuadro:
+        ```
+        lower_red = np.array([0, 100, 100])
+        upper_red = np.array([10, 255, 255])```
+
+ y se realiza una serie de operaciones para resaltar los píxeles rojos y azules. 
+ 
+ - `tr[:,:,:] = cv2.dilate(tr[:, :, :], kernel, iterations=2)`: Luego, se aplica una dilatación a la imagen resultante con una matriz kernel de 5x5.
+
+- En la región inferior izquierda (`bl`), se aplica un filtro Laplaciano para enfatizar los bordes.
+
+- En la región inferior derecha (`br`), se crea un efecto de duotono en blanco y verde.
+
+
+Este código crea una experiencia visual **única**
+
+![Pop art](popart.png)
+
+
 
 
