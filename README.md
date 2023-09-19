@@ -42,6 +42,15 @@ El código presenta una alternativa utilizando la librería OpenCV. Crea formas 
 
 ### Destacado del pixel más claro y del más oscuro
 
+En esta tarea se realiza una captura de vídeo a través de la Webcam, a través de un bucle se captura cada frame de la cámara.
 
+Se pasa la imagen a escala de grises porque asi es más sencillo averiguar cual es el píxel más y menos saturado.
+
+- `min_val, max_val, min_loc, max_loc = cv2.minMaxLoc(gray_frame)`: Se halla el valor maximo y minimo y su posicion
+- `cv2.circle(frame, min_loc, 4, (200, 100, 255), 2)`: El código dibuja un círculo en el píxel menoss saturado
+  
+Mostramos en una ventana emrgente caada frame de la cámara mostrando el vídeo con los círculos
 
 ### Propuesta de popart
+
+
