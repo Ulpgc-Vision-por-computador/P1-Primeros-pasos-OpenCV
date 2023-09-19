@@ -12,7 +12,7 @@
 
 - El código muestra la imagen de 2 formas distintas: a través de una ventana con la imagen del tablero esperando que el usuario presione una tecla en la ventana para cerrarla, y mostrando una figura Matplotlib del tablero.
 
-![Tablero de ajedrez 8x8 blanco y negro](tablero.png)
+![Tablero de ajedrez 8x8 blanco y negro](tablero.PNG)
 
 ### Imagen estilo Mondrian
 
@@ -30,9 +30,9 @@ mondrian_image[0:40,0:100,1] = 100
 
 - `plt.show()`: Muestra la figura Matplotlib con la imagen de color enriquecida con formas y colores.
 
-![Mondrian por Willy Escovilla](mondrianwilly.png)
+![Mondrian por Willy Escovilla](mondrianwilly.PNG)
 
-![Mondrian por Eduardo Etopa(un poco feo)](imagen.jpg)
+![Mondrian por Eduardo Etopa(un poco feo)](imagen.PNG)
 
 
 
@@ -54,7 +54,7 @@ El código primero separa los 3 planos de color de la imagen en variables `r`(re
 
   ![Imagen sin modificaciones](emoji.jpg)
 
-  ![Imagen modificada](risatrol.png)
+  ![Imagen modificada](risatrol.PNG)
 
 
   
@@ -94,7 +94,7 @@ En esta tarea se realiza una captura de vídeo a través de la Webcam, a través
 
 Este código crea una experiencia visual **única**
 
-![Pop art](popart.png)
+![Pop art](popart.PNG)
 
 
 
