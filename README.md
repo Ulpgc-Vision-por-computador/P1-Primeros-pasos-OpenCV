@@ -1,9 +1,10 @@
 # P1 - Primeros pasos con OpenCV
 
 ### Tablero de ajedrez
+
 **El código genera un tablero de ajedrez en blanco y negro con cuadrados de un tamaño determinado.**
 
-Empezamos creanndo la matriz chess_boards con dimensiones 800x800 con 1 plano de color, se inicializacon todos los elementos a 0, lo que ocasiona un fondo negro en una imagen en escala de grises.
+Se crea la matriz chess_boards con dimensiones 800x800 con 1 plano de color, se inicializacon todos los elementos a 0, lo que ocasiona un fondo negro en una imagen en escala de grises.
 
 se define el tamaño de los cuadrados que compondran nuestro tablero.
 
@@ -14,9 +15,33 @@ El código muestra la imagen de 2 formas distintas: a través de una ventana con
 ### Imagen estilo Mondrian
 
 
+El programa crea una matriz NumPy que representa una imagen de 200x200 píxeles con tres canales de color (rojo, verde y azul). Inicialmente, todos los píxeles están configurados en negro.
+
+- Luego se configuran partes dela imagen para que tomen un color distiinto, tomando un ejemplo:
+```py
+mondrian_image[0:40,0:100,2] = 255
+mondrian_image[0:40,0:100,1] = 100
+```
+Se realiza una modificación en la imagen en un área específica definida por los dos primeros índices. El tercer índice determina el canal de color que está siendo modificado. En este caso, estas líneas crean un cuadrado de color azul en las coordenadas especificadas.
+
+Esto se repite creando cuadrados de distintos colores a una determinada distancia para conseguir que la imagen tenga un estilo Mondrian.
+
+- `plt.imshow(color_img)`: Utiliza Matplotlib para mostrar la imagen de color generada en una figura.
+
+- `plt.show()`: Muestra la figura Matplotlib con la imagen de color enriquecida con formas y colores.
+
+
 
 ### Funciones de dibujo de OpenCV
+El código presenta una alternativa utilizando la librería OpenCV. Crea formas geométricas(rectángulos y líneas) para realizar una imagen muy similar a la obtenida anteriormente.
+
+- `cv2.rectangle(color_image, (0,0), (200,200), (255,255,255), 200)`: Utiliza OpenCV para generar un rectángulo blanco entre las coordenadas especificadas, siendo el último parámetro de la función el grosor de la figura, o en el caso de ser -1, crear una figura rellenada
+
+- `cv2.line(color_image, (100, 0), (100, 160), (0,0,0), 3)`: Genera una línea negra desde las coordendas especificadas en el primer parámetro hasta las coordenadas del segundo.
+  
 
 ### Destacado del pixel más claro y del más oscuro
+
+
 
 ### Propuesta de popart
