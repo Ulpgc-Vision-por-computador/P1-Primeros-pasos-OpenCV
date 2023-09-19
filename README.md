@@ -4,27 +4,25 @@
 
 **El código genera un tablero de ajedrez en blanco y negro con cuadrados de un tamaño determinado.**
 
-Se crea la matriz chess_boards con dimensiones 800x800 con 1 plano de color, se inicializacon todos los elementos a 0, lo que ocasiona un fondo negro en una imagen en escala de grises.
+- Se crea la matriz chess_boards con dimensiones 800x800 con 1 plano de color, se inicializacon todos los elementos a 0, lo que ocasiona un fondo negro en una imagen en escala de grises.
 
-se define el tamaño de los cuadrados que compondran nuestro tablero.
+- Se define el tamaño de los cuadrados que compondran nuestro tablero.
 
-El código utiliza 2 bucles anidados para iterar a través de las filas y columnas de la matriz chess_board con un salto del tamaño de cuadrado que se define anteriormente. Estos bucles se encargan de rellenar los cuadrados del tablero de ajedrez de blanco en el caso de que el índice de la fila más el índice de la columna sea par.
+- El código utiliza 2 bucles anidados para iterar a través de las filas y columnas de la matriz chess_board con un salto del tamaño de cuadrado que se define anteriormente. Estos bucles se encargan de rellenar los cuadrados del tablero de ajedrez de blanco en el caso de que el índice de la fila más el índice de la columna sea par.
 
-El código muestra la imagen de 2 formas distintas: a través de una ventana con la imagen del tablero esperando que el usuario presione una tecla en la ventana para cerrarla, y mostrando una figura Matplotlib del tablero.
+- El código muestra la imagen de 2 formas distintas: a través de una ventana con la imagen del tablero esperando que el usuario presione una tecla en la ventana para cerrarla, y mostrando una figura Matplotlib del tablero.
 
 ### Imagen estilo Mondrian
 
 
 El programa crea una matriz NumPy que representa una imagen de 200x200 píxeles con tres canales de color (rojo, verde y azul). Inicialmente, todos los píxeles están configurados en negro.
 
-- Luego se configuran partes dela imagen para que tomen un color distiinto, tomando un ejemplo:
+Luego se configuran partes dela imagen para que tomen un color distiinto, tomando un ejemplo:
 ```py
 mondrian_image[0:40,0:100,2] = 255
 mondrian_image[0:40,0:100,1] = 100
 ```
-Se realiza una modificación en la imagen en un área específica definida por los dos primeros índices. El tercer índice determina el canal de color que está siendo modificado. En este caso, estas líneas crean un cuadrado de color azul en las coordenadas especificadas.
-
-Esto se repite creando cuadrados de distintos colores a una determinada distancia para conseguir que la imagen tenga un estilo Mondrian.
+- Se realiza una modificación en la imagen en un área específica definida por los dos primeros índices. El tercer índice determina el canal de color que está siendo modificado. En este caso, estas líneas crean un cuadrado de color azul en las coordenadas especificadas. Esto se repite creando cuadrados de distintos colores a una determinada distancia para conseguir que la imagen tenga un estilo Mondrian.
 
 - `plt.imshow(color_img)`: Utiliza Matplotlib para mostrar la imagen de color generada en una figura.
 
@@ -44,12 +42,12 @@ El código presenta una alternativa utilizando la librería OpenCV. Crea formas 
 
 En esta tarea se realiza una captura de vídeo a través de la Webcam, a través de un bucle se captura cada frame de la cámara.
 
-Se pasa la imagen a escala de grises porque asi es más sencillo averiguar cual es el píxel más y menos saturado.
+- Se pasa la imagen a escala de grises porque asi es más sencillo averiguar cual es el píxel más y menos saturado.
 
 - `min_val, max_val, min_loc, max_loc = cv2.minMaxLoc(gray_frame)`: Se halla el valor maximo y minimo y su posicion
 - `cv2.circle(frame, min_loc, 4, (200, 100, 255), 2)`: El código dibuja un círculo en el píxel menoss saturado
   
-Mostramos en una ventana emrgente caada frame de la cámara mostrando el vídeo con los círculos
+- Mostramos en una ventana emrgente caada frame de la cámara mostrando el vídeo con los círculos
 
 ### Propuesta de popart
 
