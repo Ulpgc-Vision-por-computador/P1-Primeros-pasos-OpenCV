@@ -1,4 +1,6 @@
 # P1 - Primeros pasos con OpenCV
+  
+## Desarrollo
 
 ### Tablero de ajedrez
 
@@ -109,15 +111,25 @@ En esta tarea el objetivo es el mismo que en la anterior, sin embargo se tendrá
 
 - En la región inferior derecha (`br`), se crea un efecto de duotono en negro y verde.
 
-Como ayuda para obtener ideas y tipos de filtros que se pueden aplicar empleando OpenCV así como para aprender como convolusionar una imagen con un kernel se han visitado estas páginas:
-- [learnopencv](https://learnopencv.com/image-filtering-using-convolution-in-opencv/#gauss-blur-opencv)
-- [desktop.arcgis](https://desktop.arcgis.com/es/arcmap/latest/manage-data/raster-and-images/convolution-function.htm#:~:text=La%20funci%C3%B3n%20de%20convoluci%C3%B3n%20realiza,realces%20basados%20en%20el%20kernel)
 
 Este código crea una experiencia visual **única**
 
 ![Pop art](popart.PNG "Pop art")
 
 Figura 6: Pop art
+
+## Fuentes de información
+
+Como ayuda para obtener ideas y tipos de filtros que se pueden aplicar empleando OpenCV así como para aprender como convolusionar una imagen con un kernel se han visitado estas páginas:
+- [learnopencv](https://learnopencv.com/image-filtering-using-convolution-in-opencv/#gauss-blur-opencv)
+- [desktop.arcgis](https://desktop.arcgis.com/es/arcmap/latest/manage-data/raster-and-images/convolution-function.htm#:~:text=La%20funci%C3%B3n%20de%20convoluci%C3%B3n%20realiza,realces%20basados%20en%20el%20kernel)
+- [docs.opencv.org](https://docs.opencv.org/4.x/d4/d86/group__imgproc__filter.html)
+
+
+
+Realizado por:
+- Eduardo Etopa Lechuga
+- Willy Escovilla Biason
 
 
 
