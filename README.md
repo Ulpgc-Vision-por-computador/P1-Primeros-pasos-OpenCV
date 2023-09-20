@@ -32,7 +32,7 @@ mondrian_image[0:40,0:100,1] = 100
 
 ![Mondrian por Willy Escovilla](mondrianwilly.PNG)
 
-![Mondrian por Eduardo Etopa(un poco feo)](imagen.PNG)
+![Mondrian por Eduardo Etopa(un poco feo)](imagen.jpg)
 
 
 
@@ -45,7 +45,7 @@ mondrian_image[0:40,0:100,1] = 100
 
 
 
-###Modificación de valores de un plano de imagen
+### Modificación de valores de un plano de imagen
 
 El código primero separa los 3 planos de color de la imagen en variables `r`(red), `g`(green), y `b`(blue)
 
