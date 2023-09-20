@@ -79,6 +79,15 @@ En esta tarea se realiza una captura de vídeo a través de la Webcam, a través
   
 - Mostramos en una ventana emrgente caada frame de la cámara mostrando el vídeo con los círculos
 
+### Destacado de la región 8x8 más clara y la más oscura
+
+En esta tarea el objetivo es el mismo que en la anterior, sin embargo se tendrán en cuenta conjuntos de pixeles de tamaño 8x8.
+
+- Se recorre la imagen pixel por pixel
+- `np.mean(frame[x:x+8,y:y+8])`: Se halla el valor medio entre el pixel en la posición x,y y sus vecinos
+- Se actualizan las variables que contienen el máximo, el mínimo y sus posiciones en caso de encontrar un nuevo máximo o mínimo
+- Se dibuja en la región más oscura y más clara unos círculos
+
 ### Propuesta de popart
 
 
@@ -96,10 +105,13 @@ En esta tarea se realiza una captura de vídeo a través de la Webcam, a través
  
  - `tr[:,:,:] = cv2.dilate(tr[:, :, :], kernel, iterations=2)`: Luego, se aplica una dilatación a la imagen resultante con una matriz kernel de 5x5.
 
-- En la región inferior izquierda (`bl`), se aplica un filtro Laplaciano para enfatizar los bordes.
+- En la región inferior izquierda (`bl`), se convolusiona la imagen empleando un kernel para conseguir un filtro Laplaciano.
 
-- En la región inferior derecha (`br`), se crea un efecto de duotono en blanco y verde.
+- En la región inferior derecha (`br`), se crea un efecto de duotono en negro y verde.
 
+Como ayuda para obtener ideas y tipos de filtros que se pueden aplicar empleando OpenCV así como para aprender como convolusionar una imagen con un kernel se han visitado estas páginas:
+- [learnopencv](https://learnopencv.com/image-filtering-using-convolution-in-opencv/#gauss-blur-opencv)
+- [desktop.arcgis](https://desktop.arcgis.com/es/arcmap/latest/manage-data/raster-and-images/convolution-function.htm#:~:text=La%20funci%C3%B3n%20de%20convoluci%C3%B3n%20realiza,realces%20basados%20en%20el%20kernel)
 
 Este código crea una experiencia visual **única**
 
